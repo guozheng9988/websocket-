@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="format-detection" content="email=no"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+        <title>多人聊天室</title>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+
+        <script src="../socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <div id="loginbox">
+            <div id="boxcontent">
+                请先输入你在聊天室的昵称
+                <br/>
+                <br/>
+                <input type="text"  placeholder="请输入用户名" id="username" name="username" />
+				<input type="button" id="button" value="提交" onclick="CHAT.usernameSubmit();"/>
+            </div>
+        </div>
+        <div id="chatbox" style="display:none;">
+            <div id="chatcontent">
+                <div id="chatinner">
+                    <span class="span1">Websocket多人聊天室</span>
+                    <span class="span2"><span id="showusername"></span> | 
+					<a class="a1"href="javascript:;" onclick="CHAT.logout()">退出</a></span>
+                </div>
+            </div>
+            <div id="doc">
+                <div id="chat">
+                    <div id="message" class="message">
+                     <div id="onlinecount"></div>
+                    </div>
+                    <div class="input-box" id="input-box">
+                        <div class="input">
+                           <input type="text" maxlength="140" placeholder="请输入聊天内容" id="content" name="content" > 
+                        </div>
+                        <div class="action">
+                             <img src="img/ejs.png" class="ejs"  onclick="CHAT.ejs();">
+                             <button type="button" id="mjr_send" onclick="CHAT.submit();">提交</button>
+                        </div>
+                        
+                    </div>
+                    <div  id="bqing">
+                            <img src="img/images/face_01.png"><img src="img/images/face_02.png">
+                            <img src="img/images/face_03.png"><img src="img/images/face_04.png">
+                            <img src="img/images/face_05.png"><img src="img/images/face_06.png">
+                            <img src="img/images/face_07.png"> <img src="img/images/face_08.png">
+                            <img src="img/images/face_09.png"> <img src="img/images/face_10.png">
+                            <img src="img/images/face_11.png"> <img src="img/images/face_12.png">
+                            <img src="img/images/face_13.png"> <img src="img/images/face_14.png">
+                            <img src="img/images/face_15.png"> <img src="img/images/face_16.png">
+                            <img src="img/images/face_17.png"> <img src="img/images/face_18.png">
+                            <img src="img/images/face_19.png"> <img src="img/images/face_20.png">
+                            <img src="img/images/face_21.png"> <img src="img/images/face_22.png">
+                            <img src="img/images/face_23.png"> <img src="img/images/face_24.png">
+                            <img src="img/images/face_25.png"> <img src="img/images/face_26.png">
+                            <img src="img/images/face_27.png"> <img src="img/images/face_28.png">
+                            <img src="img/images/face_29.png"> <img src="img/images/face_30.png">
+                            <img src="img/images/face_31.png"> <img src="img/images/face_32.png">
+                            <img src="img/images/face_33.png"> <img src="img/images/face_34.png">
+                            <img src="img/images/face_35.png"> <img src="img/images/face_36.png">
+                            <img src="img/images/face_37.png"> <img src="img/images/face_38.png">
+                            <img src="img/images/face_39.png"> <img src="img/images/face_40.png">
+                            <img src="img/images/face_41.png"> <img src="img/images/face_42.png">
+                            <img src="img/images/face_43.png"> <img src="img/images/face_44.png">
+                            <img src="img/images/face_45.png"> <img src="img/images/face_46.png">
+                        </div>
+                </div>
+            </div>
+        </div>
+       
+        <script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
+         <script type="text/javascript" src="./client.js"></script>
+         <script type="text/javascript">
+             
+         </script>
+        
+    </body>
+</html>
